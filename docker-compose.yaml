@@ -1,0 +1,15 @@
+services:
+  main:
+    # Build off the Dockerfile in the same directory as this file
+    build: .
+    volumes:
+      - ./workspace:/workspace
+    # devices:
+    # environment:
+    #   DISPLAY: ${DISPLAY}
+    # network_mode: "host"
+    platform: "linux/amd64"
+    # Next two lines simulate `docker run -it`
+    # Cancel the container by doing Ctrl-C
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
